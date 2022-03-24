@@ -13,8 +13,8 @@ const generateIdValidators = () => [
 
 const updateAdoptionValidators = () => [
     check('id').notEmpty().isNumeric().withMessage("Invalid id"),
-    check('user_id').notEmpty().isNumeric().withMessage("Invalid user id"),
-    check('pet_id').notEmpty().isNumeric().withMessage("Invalid pet id"),
+    check('user_id').optional().isNumeric().withMessage("Invalid user id"),
+    check('pet_id').optional().isNumeric().withMessage("Invalid pet id"),
     check('date').isDate("YYYY/MM/DD").withMessage("Invalid date")
 ]
 
